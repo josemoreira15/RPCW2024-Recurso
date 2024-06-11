@@ -1,0 +1,293 @@
+@prefix : <http://rpcw.di.uminho.pt/2024/untitled-ontology-34/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rpcw.di.uminho.pt/2024/untitled-ontology-34/> .
+
+<http://rpcw.di.uminho.pt/2024/untitled-ontology-34> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#hasAuthor
+:hasAuthor rdf:type owl:ObjectProperty ;
+           rdfs:domain :Book ;
+           rdfs:range :Author .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#hasAward
+:hasAward rdf:type owl:ObjectProperty ;
+          rdfs:domain :Book ;
+          rdfs:range :Award .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#hasCharacter
+:hasCharacter rdf:type owl:ObjectProperty ;
+              rdfs:domain :Book ;
+              rdfs:range :Character .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#hasGenre
+:hasGenre rdf:type owl:ObjectProperty ;
+          rdfs:domain :Book ;
+          rdfs:range :Genre .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#hasPublisher
+:hasPublisher rdf:type owl:ObjectProperty ;
+              rdfs:domain :Book ;
+              rdfs:range :Publisher .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#hasSetting
+:hasSetting rdf:type owl:ObjectProperty ;
+            rdfs:domain :Book ;
+            rdfs:range :Place .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#bbescore
+:bbescore rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Book ;
+          rdfs:range xsd:int .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#bbevotes
+:bbevotes rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Book ;
+          rdfs:range xsd:int .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#coverimg
+:coverimg rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Book ;
+          rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Book ;
+             rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#edition
+:edition rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Book ;
+         rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#firstpubdate
+:firstpubdate rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Book ;
+              rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#fivestars
+:fivestars rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Book ;
+           rdfs:range xsd:int .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#format
+:format rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Book ;
+        rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#fourstars
+:fourstars rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Book ;
+           rdfs:range xsd:int .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#id
+:id rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Book ;
+    rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#isbn
+:isbn rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Book ;
+      rdfs:range xsd:int .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#language
+:language rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Book ;
+          rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#likedpercent
+:likedpercent rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Book ;
+              rdfs:range xsd:int .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#numratings
+:numratings rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Book ;
+            rdfs:range xsd:int .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#onestar
+:onestar rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Book ;
+         rdfs:range xsd:int .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#pages
+:pages rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Book ;
+       rdfs:range xsd:int .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#price
+:price rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Book ;
+       rdfs:range xsd:float .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#pubdate
+:pubdate rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Book ;
+         rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#rating
+:rating rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Book ;
+        rdfs:range xsd:float .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#series
+:series rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Book ;
+        rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#threestars
+:threestars rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Book ;
+            rdfs:range xsd:int .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#title
+:title rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Book ;
+       rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#twostars
+:twostars rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Book ;
+          rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Author
+:Author rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Award
+:Award rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Book
+:Book rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Character
+:Character rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Genre
+:Genre rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Place
+:Place rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Publisher
+:Publisher rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#BestAward
+:BestAward rdf:type owl:NamedIndividual ,
+                    :Award .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Fiction
+:Fiction rdf:type owl:NamedIndividual ,
+                  :Genre .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Katniss
+:Katniss rdf:type owl:NamedIndividual ,
+                  :Character .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Livro1
+:Livro1 rdf:type owl:NamedIndividual ,
+                 :Book ;
+        :hasAuthor :Suzanne_Collins ;
+        :hasAward :BestAward ;
+        :hasCharacter :Katniss ;
+        :hasGenre :Fiction ;
+        :hasPublisher :Scholastic ;
+        :hasSetting :Panem ;
+        :bbescore "121"^^xsd:int ;
+        :bbevotes "2121"^^xsd:int ;
+        :coverimg "dsdsa" ;
+        :description "Really nice" ;
+        :edition "first" ;
+        :firstpubdate "first" ;
+        :fivestars "212"^^xsd:int ;
+        :format "hardcover" ;
+        :fourstars "12"^^xsd:int ;
+        :id "2767052-the-hunger-games" ;
+        :isbn "312321312"^^xsd:int ;
+        :language "English" ;
+        :likedpercent "12"^^xsd:int ;
+        :numratings "321321"^^xsd:int ;
+        :onestar "12"^^xsd:int ;
+        :pages "1221"^^xsd:int ;
+        :price "1.46"^^xsd:float ;
+        :pubdate "dasdas" ;
+        :rating "4.33"^^xsd:float ;
+        :series "The Hunger Games #1" ;
+        :threestars "21"^^xsd:int ;
+        :title "The Hunger Games" ;
+        :twostars "12"^^xsd:int .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Panem
+:Panem rdf:type owl:NamedIndividual ,
+                :Place .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Scholastic
+:Scholastic rdf:type owl:NamedIndividual ,
+                     :Publisher .
+
+
+###  http://rpcw.di.uminho.pt/2024/untitled-ontology-34#Suzanne_Collins
+:Suzanne_Collins rdf:type owl:NamedIndividual ,
+                          :Author .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
